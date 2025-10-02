@@ -87,13 +87,14 @@ h1 {
     margin: 1rem auto;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .player1-indicator {
     border: 3px solid #b83d3d;
     color: #b83d3d;
     background-color: #e6b3b3;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -103,7 +104,7 @@ h1 {
     border: 3px solid #1d2a35;
     color: #1d2a35;
     background-color: #a3bacc;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -111,7 +112,9 @@ h1 {
 
 .inactive {
     background-color: #c1b8c8;
+    opacity: 0.5;
 }
+
 
 dialog {
   position: fixed;
@@ -180,5 +183,9 @@ button:hover {
   }
   .player-indicator {
       width: 500px;
+  }
+  .player1-indicator,
+  .player2-indicator {
+    font-size: 2rem;
   }
 }
