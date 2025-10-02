@@ -1,7 +1,7 @@
-/*
+/* /* 
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+/*, *::before, *::after {
     box-sizing: border-box;
   }
   /*
@@ -15,54 +15,57 @@
     3. Add accessible line-height
     4. Improve text rendering
   */
-  body {
+  /* body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-  }
+  } */
   /*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
+  /* img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
-  }
+  } */
   /*
     6. Remove built-in form typography styles
   */
-  input, button, textarea, select {
+  /* input, button, textarea, select {
     font: inherit;
-  }
+  } */
   /*
     7. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
+  /* p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
-  }
+  } */
   /*
     8. Create a root stacking context
   */
-  #root, #__next {
+  /* #root, #__next {
     isolation: isolate;
-  }
+  } */ 
 
 /**** CUSTOM CSS ****/
 body {
+  font-size: 20px;
+  background-color: #c1b8c8;
+}
+
+.game-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 20px;
-    background-color: #c1b8c8;
 }
 
 h1 {
     margin: 2rem auto;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #084c61;
 }
 
 .game-board {
-    width: max(300px, 500px);
-    height: max(300px, 500px);
+    width: 300px;
+    height: 300px;
     margin: 1rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -80,11 +83,10 @@ h1 {
 }
 
 .player-indicator {
-    width: max(300px, 500px);
+    width: 300px;
     margin: 1rem auto;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-evenly;
 }
 
 .player1-indicator {
@@ -116,9 +118,14 @@ dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
-  font-size: 2rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
   font-variant: small-caps;
+  margin: 0;
+}
+
+dialog p {
+  margin: 0px auto;
 }
 
 #game-setup form {
@@ -128,11 +135,26 @@ dialog {
   gap: 1rem;
 }
 
+input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0;
+}
+
+.game-over-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
   margin: 1rem auto;
   background-color: #9ba0bc;
   color: #084c61;
   font-variant: small-caps;
+  border-radius: 8px;
 }
 
 button:hover {
@@ -149,4 +171,14 @@ button:hover {
     green
   );
   opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+  .game-board {
+      width: 500px;
+      height: 500px;
+  }
+  .player-indicator {
+      width: 500px;
+  }
 }

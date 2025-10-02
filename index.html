@@ -8,42 +8,45 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-   <h1>Tic-Tac-Toe</h1>
-   <div class="game-board">
-        <div class="square" id="0"></div>
-        <div class="square" id="1"></div>
-        <div class="square" id="2"></div>
-        <div class="square" id="3"></div>
-        <div class="square" id="4"></div>
-        <div class="square" id="5"></div>
-        <div class="square" id="6"></div>
-        <div class="square" id="7"></div>
-        <div class="square" id="8"></div>
-   </div>
-   <div class="player-indicator">
-        <div class="player1-indicator">
-            <h2 class="name1"></h2>
-            <p class="symbol1">X</p>
+    <div class="game-wrapper">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="game-board">
+                <div class="square" id="0"></div>
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
         </div>
-        <div class="player2-indicator inactive">
-            <h2 class="name2"></h2>
-            <p class="symbol2">O</p>
+        <div class="player-indicator">
+                <div class="player1-indicator">
+                    <h2 class="name1"></h2>
+                    <p class="symbol1">X</p>
+                </div>
+                <div class="player2-indicator inactive">
+                    <h2 class="name2"></h2>
+                    <p class="symbol2">O</p>
+                </div>
         </div>
-   </div>
-   <dialog id="game-setup">
-        <form method="dialog">
-            <p>Want to play Tic-Tac-Toe?</p>
-            <label for="x-player">Player One Name:</label>
-            <input type="text" id="x-player" name="x-player" maxlength="16">
-            <label for="o-player">Player Two Name:</label>
-            <input type="text" id="o-player" name="o-player" maxlength="16">
-            <button class="play">Play Game!</button>
-        </form>
-   </dialog>
-   <dialog id="game-over">
-        <p class="winner-message"></p>
-        <button class="reset">Reset Game</button>
-   </dialog>
-    
+        <dialog id="game-setup">
+                <form method="dialog">
+                    <p>Let's play Tic-Tac-Toe!</p>
+                    <label for="x-player">Player One Name:</label>
+                    <input type="text" id="x-player" name="x-player" maxlength="16">
+                    <label for="o-player">Player Two Name:</label>
+                    <input type="text" id="o-player" name="o-player" maxlength="16">
+                    <button class="play">Play Game!</button>
+                </form>
+        </dialog>
+        <dialog id="game-over">
+                <div class="game-over-content">
+                    <p class="winner-message"></p>
+                    <button class="reset">Reset Game</button>
+                </div>
+        </dialog>
+    </div> 
 </body>
 </html>

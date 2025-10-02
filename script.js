@@ -49,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function(){
 play.addEventListener("click", function(){
   player1Name.innerText = xPlayer.value;
   player2Name.innerText = oPlayer.value;
+  xPlayer.value === "" ? player1.name = "X's" : player1.name = xPlayer.value;
+  oPlayer.value === "" ? player2.name = "O's" : player2.name = oPlayer.value;
 });
 
 function setUpGame(){
@@ -141,11 +143,13 @@ squares.forEach(function(box){
  reset.addEventListener("click", function(){
   gameOverDialog.close();
   setUpGame();
+  setupDialog.showModal();
  });
 
  document.addEventListener("keydown", function(e){
   if(e.key === "Escape"){
     gameOverDialog.close();
     setUpGame();
+    setupDialog.showModal();
   };
  });
